@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.umgmi.cukio">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/cukio"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cukio"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cukio"
+        tools:targetApi="31">
+
+        <!-- Declaración de actividades -->
+        <activity
+            android:name=".ui.Menu_principal"
+            android:theme="@style/Theme.Cukio"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RegistroActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Cukio">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+
+</manifest>
